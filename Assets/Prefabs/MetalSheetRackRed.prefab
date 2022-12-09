@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 8554891112009316304}
   - component: {fileID: 5904085958009915035}
   - component: {fileID: 1436070921948369981}
+  - component: {fileID: -7093240794205375898}
   m_Layer: 0
   m_Name: MetalSheetRackRed
   m_TagString: Untagged
@@ -182,6 +183,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-7093240794205375898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441140732486858971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.113407694, y: 5.1984, z: 4.4374228}
+  m_Center: {x: 0.15922935, y: 2.4943078, z: -11.472797}
 --- !u!1 &4311529668889919376
 GameObject:
   m_ObjectHideFlags: 0
