@@ -7,7 +7,7 @@ public class Coins : MonoBehaviour
     void Update()
     {
 
-        //Rota la moneda una cantidad diferente en cada dirección y en cada intervalo de tiempo
+        //Rotates the coin a different amount in each direction and at each time interval
         transform.Rotate(new Vector3(0, 0, 90)*UnityEngine.Time.deltaTime);
 
     }
