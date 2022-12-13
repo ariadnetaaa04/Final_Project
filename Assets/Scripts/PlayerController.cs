@@ -5,20 +5,21 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public Coins coins;
-    public Inventory inventory;
-    private float speed = 5f;
+    // public Coins coins;
+    // public Inventory inventory;
+    public int points;
+    private float speed = 2f;
     private float turnSpeed = 2f;
     private float horizontalInput;
     private float verticalInput;
 
     //Associates the object textCoins
-    public Text textCoins;
+   // public Text textCoins;
 
     // Start is called before the first frame update
     void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+       // inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
          
     }
 
@@ -32,13 +33,16 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.right * turnSpeed * UnityEngine.Time.deltaTime * horizontalInput);
         
     }
+    
     private void OnTriggerEnter(Collider other)
     {
        
         if (other.gameObject.name.Contains("coin"))
         {
-            inventory.Quantity = inventory.Quantity + 1;
+            points++;
+           // inventory.Quantity = inventory.Quantity + 1;
             Destroy(other.gameObject);
         }
     }
+    
 }

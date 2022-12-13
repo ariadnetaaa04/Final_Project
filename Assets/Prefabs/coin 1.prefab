@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089305fbf655a184a91360862a356321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: {fileID: 0}
+  puntos: {fileID: 0}
 --- !u!54 &5449995789415560816
 Rigidbody:
   m_ObjectHideFlags: 0

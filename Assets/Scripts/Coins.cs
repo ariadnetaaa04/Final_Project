@@ -5,13 +5,26 @@ using UnityEngine.UI;
 
 public class Coins : MonoBehaviour
 {
-    public Inventory Inventory;
-    public Text puntos;
+    /*
+    //buscar script puntos
+    public GameObject ObjPoints;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            ObjPoints.GetComponent<Puntos>().points += 1;
+            Destroy(gameObject);
+        }
+    }
+    */
+
+   // public Inventory Inventory;
+   // public Text puntos;
 
     // Start is called before the first frame update
     void Start()
     {
-        Inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+       // Inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     // Update is called once per frame
