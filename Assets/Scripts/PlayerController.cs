@@ -2,25 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    // public Coins coins;
-    // public Inventory inventory;
-    public int points;
+  
+    private int points;
     private float speed = 2f;
     private float turnSpeed = 2f;
     private float horizontalInput;
     private float verticalInput;
+    private int score;
 
-    //Associates the object textCoins
-   // public Text textCoins;
+    public TMP_Text scoreText;
+    public TMP_Text GameOverText;
+    private bool GameOver;
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-       // inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-         
+        GameOver = false;
+        //The reference to the text.The reference to the object text.Not active
+        GameOverText.gameObject.SetActive(false);
+
+        score = 0;
+       UpdateScore();
     }
 
     // Update is called once per frame
@@ -39,10 +48,17 @@ public class PlayerController : MonoBehaviour
        
         if (other.gameObject.name.Contains("coin"))
         {
-            points++;
-           // inventory.Quantity = inventory.Quantity + 1;
+            
+            Debug.Log($"You have collected {points} coins of 31");
             Destroy(other.gameObject);
+            score++;
+            UpdateScore();
         }
+    }
+    private void UpdateScore()
+    {
+        //La variable que representa el texto y su cadena de texto. "El texto" + la variable de los puntos
+        scoreText.text = "Coins: " + score;
     }
     
 }
